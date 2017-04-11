@@ -1,0 +1,44 @@
+{
+  "app-id": "org.DolphinEmu.dolphin-emu",
+  "version": "5.0",
+  "branch": "master",
+  "runtime": "org.gnome.Platform",
+  "runtime-version": "3.24",
+  "sdk": "org.gnome.Sdk",
+  "command": "dolphin-emu",
+  "rename-desktop-file": "dolphin-emu.desktop",
+  "rename-icon": "dolphin-emu",
+  "rename-appdata-file": "dolphin-emu.appdata.xml",
+  "finish-args": [
+    "--device=dri",
+    "--filesystem=home:ro",
+    "--socket=pulseaudio",
+    "--socket=wayland",
+    "--socket=x11",
+    "--share=network"
+  ],
+  "modules": [
+    {
+      "name": "dolphin-emu",
+      "buildsystem": "cmake",
+      "config-opts": [
+        "-DENABLE_SDL=ON",
+        "-DENABLE_EVDEV=OFF"
+      ],
+      "post-install": [
+        "install -Dm644 appdata.xml /app/share/appdata/dolphin-emu.appdata.xml"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://github.com/dolphin-emu/dolphin/archive/5.0.tar.gz",
+          "sha256": "62c4602055767ab314ff50a3b94ea57f792832aa1629e6b1117ebce10518dc0b"
+        },
+        {
+          "type": "file",
+          "path": "appdata.xml"
+        }
+      ]
+    }
+  ]
+}
