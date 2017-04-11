@@ -1,7 +1,6 @@
 {
   "app-id": "org.DolphinEmu.dolphin-emu",
   "version": "5.0",
-  "branch": "master",
   "runtime": "org.gnome.Platform",
   "runtime-version": "3.24",
   "sdk": "org.gnome.Sdk",
