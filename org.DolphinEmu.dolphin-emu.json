@@ -28,15 +28,11 @@
         "arch": {
           "i386": {
             "config-opts": [
-              "-DENABLE_GENERIC=ON",
-              "-DENABLE_SDL=ON",
               "-DENABLE_EVDEV=OFF"
             ]
           },
           "arm": {
             "config-opts": [
-              "-DENABLE_GENERIC=ON",
-              "-DENABLE_SDL=ON",
               "-DENABLE_EVDEV=OFF"
             ]
           }
