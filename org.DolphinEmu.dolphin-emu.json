@@ -26,11 +26,6 @@
           "-DENABLE_EVDEV=OFF"
         ],
         "arch": {
-          "i386": {
-            "config-opts": [
-              "-DENABLE_GENERIC=ON"
-            ]
-          },
           "arm": {
             "config-opts": [
               "-DENABLE_GENERIC=ON"
