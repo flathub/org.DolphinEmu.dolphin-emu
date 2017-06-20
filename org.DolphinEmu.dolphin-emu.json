@@ -24,19 +24,7 @@
         "config-opts": [
           "-DENABLE_SDL=ON",
           "-DENABLE_EVDEV=OFF"
-        ],
-        "arch": {
-          "i386": {
-            "config-opts": [
-              "-DENABLE_EVDEV=OFF"
-            ]
-          },
-          "arm": {
-            "config-opts": [
-              "-DENABLE_EVDEV=OFF"
-            ]
-          }
-        }
+        ]
       },
       "post-install": [
         "install -Dm644 appdata.xml /app/share/appdata/dolphin-emu.appdata.xml"
