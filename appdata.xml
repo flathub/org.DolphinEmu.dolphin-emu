@@ -18,9 +18,12 @@
   <url type="bugtracker">https://bugs.dolphin-emu.org/projects/emulator/issues</url>
   <screenshots>
     <screenshot type="default">https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/1.png</screenshot>
-    <screenshot >https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/2.png</screenshot>
-    <screenshot >https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/3.png</screenshot>
-    <screenshot >https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/3.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/2.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/3.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/4.png</screenshot>
   </screenshots>
+  <releases>
+    <release date="2016-06-24" version="5.0"/>
+  </releases>
   <update_contact>b@bpiotrowski.pl</update_contact>
 </application>

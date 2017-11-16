@@ -1,16 +1,16 @@
 {
   "app-id": "org.DolphinEmu.dolphin-emu",
-  "version": "5.0",
-  "runtime": "org.gnome.Platform",
-  "runtime-version": "3.24",
-  "sdk": "org.gnome.Sdk",
+  "branch": "stable",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "1.6",
+  "sdk": "org.freedesktop.Sdk",
   "command": "dolphin-emu",
   "rename-desktop-file": "dolphin-emu.desktop",
   "rename-icon": "dolphin-emu",
   "rename-appdata-file": "dolphin-emu.appdata.xml",
   "finish-args": [
     "--device=dri",
-    "--filesystem=home:ro",
+    "--filesystem=host:ro",
     "--socket=pulseaudio",
     "--socket=wayland",
     "--socket=x11",
@@ -18,13 +18,55 @@
   ],
   "modules": [
     {
+      "name": "wxWidgets",
+      "rm-configure": true,
+      "cleanup": [
+         "/bin",
+         "/include",
+         "/share/bakefile",
+         "/share/aclocal"
+      ],
+      "config-opts": [
+        "--with-libpng",
+        "--with-zlib",
+        "--disable-sdltest",
+        "--disable-webkit",
+        "--disable-webview",
+        "--disable-webviewwebkit",
+        "--disable-ribbon",
+        "--disable-html",
+        "--disable-propgrid",
+        "--disable-xru",
+        "--disable-richtext",
+        "--with-expat=builtin",
+        "--with-libiconv=/usr"
+      ],
+      "sources": [
+         {
+             "type": "archive",
+             "url": "https://github.com/wxWidgets/wxWidgets/releases/download/v3.0.3.1/wxWidgets-3.0.3.1.tar.bz2",
+             "sha256":"3164ad6bc5f61c48d2185b39065ddbe44283eb834a5f62beb13f1d0923e366e4"
+         },
+         {
+             "type": "script",
+             "dest-filename": "autogen.sh",
+             "commands": [
+                 "cp -p /usr/share/automake-*/config.{sub,guess} .",
+                 "autoconf -f -B build/autoconf_prepend-include"
+             ]
+         }
+      ]
+    },
+    {
       "name": "dolphin-emu",
-      "buildsystem": "cmake",
+      "buildsystem": "cmake-ninja",
+      "config-opts": [
+        "-DENABLE_ALSA=OFF",
+        "-DENABLE_SDL=ON",
+        "-DENABLE_EVDEV=OFF",
+        "-DDISTRIBUTOR=Flathub"
+      ],
       "build-options": {
-        "config-opts": [
-          "-DENABLE_SDL=ON",
-          "-DENABLE_EVDEV=OFF"
-        ],
         "arch": {
           "arm": {
             "config-opts": [
@@ -33,6 +75,7 @@
           }
         }
       },
+      "cleanup": [ "/bin/dolphin-emu-nogui" ],
       "post-install": [
         "install -Dm644 appdata.xml /app/share/appdata/dolphin-emu.appdata.xml"
       ],
@@ -41,6 +84,14 @@
           "type": "archive",
           "url": "https://github.com/dolphin-emu/dolphin/archive/5.0.tar.gz",
           "sha256": "62c4602055767ab314ff50a3b94ea57f792832aa1629e6b1117ebce10518dc0b"
+        },
+        {
+          "type": "patch",
+          "path": "dolphin-emu-5.0-gtk3.patch"
+        },
+        {
+          "type": "patch",
+          "path": "6033250bebe9f5dcec47c4e2ec8e5d3b102f73e7.patch"
         },
         {
           "type": "file",
