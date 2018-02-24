@@ -1,9 +1,9 @@
 {
   "app-id": "org.DolphinEmu.dolphin-emu",
   "branch": "stable",
-  "runtime": "org.freedesktop.Platform",
-  "runtime-version": "1.6",
-  "sdk": "org.freedesktop.Sdk",
+  "runtime": "org.kde.Platform",
+  "runtime-version": "5.9",
+  "sdk": "org.kde.Sdk",
   "command": "dolphin-emu",
   "rename-desktop-file": "dolphin-emu.desktop",
   "rename-icon": "dolphin-emu",
@@ -13,40 +13,14 @@
     "--filesystem=host:ro",
     "--socket=pulseaudio",
     "--socket=x11",
-    "--share=network"
+    "--share=network",
+
+    "--talk-name=ca.desrt.dconf",
+    "--filesystem=xdg-run/dconf",
+    "--filesystem=~/.config/dconf:ro",
+    "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
   ],
   "modules": [
-    {
-      "name": "wxWidgets",
-      "rm-configure": true,
-      "cleanup": [
-         "/bin",
-         "/include",
-         "/share/bakefile",
-         "/share/aclocal"
-      ],
-      "config-opts": [
-        "--with-libpng",
-        "--with-zlib",
-        "--disable-sdltest",
-        "--disable-webkit",
-        "--disable-webview",
-        "--disable-webviewwebkit",
-        "--disable-ribbon",
-        "--disable-html",
-        "--disable-propgrid",
-        "--disable-richtext",
-        "--with-expat=builtin",
-        "--with-libiconv=/usr"
-      ],
-      "sources": [
-        {
-         "type": "archive",
-         "url": "https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.1/wxWidgets-3.1.1.tar.bz2",
-         "sha256":"c925dfe17e8f8b09eb7ea9bfdcfcc13696a3e14e92750effd839f5e10726159e"
-        }
-      ]
-    },
     {
       "name": "libusb",
       "config-opts": [
@@ -76,8 +50,7 @@
         "-DENABLE_ALSA=OFF",
         "-DENABLE_SDL=ON",
         "-DENABLE_EVDEV=OFF",
-        "-DENABLE_WX=ON",
-        "-DENABLE_QT2=OFF",
+        "-DENABLE_WX=OFF",
         "-DDISTRIBUTOR=Flathub"
       ],
       "build-options": {
@@ -99,15 +72,11 @@
         {
           "type": "git",
           "url": "https://github.com/dolphin-emu/dolphin.git",
-          "commit": "7dc16efc9d0bde02615625d58a2aa663ad20585d"
+          "commit": "b5e6cd97258bff6162b7e75fe2b2a69555a78587"
         },
         {
           "type": "file",
           "path": "appdata.xml"
-        },
-        {
-          "type": "patch",
-          "path": "use-gtk3.patch"
         }
       ]
     }
