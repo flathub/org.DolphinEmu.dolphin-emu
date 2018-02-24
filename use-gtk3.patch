@@ -1,0 +1,30 @@
+From f289be92adff662d935d3653a0124b77b9496a7e Mon Sep 17 00:00:00 2001
+From: Patrick Griffis <tingping@tingping.se>
+Date: Sat, 24 Feb 2018 13:08:14 -0500
+Subject: [PATCH] Use Gtk3
+
+---
+ Source/Core/DolphinWX/CMakeLists.txt | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+
+diff --git a/Source/Core/DolphinWX/CMakeLists.txt b/Source/Core/DolphinWX/CMakeLists.txt
+index 505d112..cffccc6 100644
+--- a/Source/Core/DolphinWX/CMakeLists.txt
++++ b/Source/Core/DolphinWX/CMakeLists.txt
+@@ -110,9 +110,10 @@ add_executable(dolphin-emu ${SRCS})
+ target_link_libraries(dolphin-emu PRIVATE ${LIBS})
+ 
+ if(USE_X11)
+-  find_package(GTK2 REQUIRED)
+-  target_link_libraries(dolphin-emu PRIVATE ${GTK2_LIBRARIES})
+-  target_include_directories(dolphin-emu PRIVATE ${GTK2_INCLUDE_DIRS})
++  find_package(PkgConfig)
++  pkg_check_modules(GTK3 REQUIRED gtk+-x11-3.0)
++  target_link_libraries(dolphin-emu PRIVATE ${GTK3_LIBRARIES})
++  target_include_directories(dolphin-emu PRIVATE ${GTK3_INCLUDE_DIRS})
+ endif()
+ 
+ # Handle localization
+-- 
+2.14.3
+

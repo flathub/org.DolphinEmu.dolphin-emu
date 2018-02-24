@@ -36,34 +36,49 @@
         "--disable-ribbon",
         "--disable-html",
         "--disable-propgrid",
-        "--disable-xru",
         "--disable-richtext",
         "--with-expat=builtin",
         "--with-libiconv=/usr"
       ],
       "sources": [
-         {
-             "type": "archive",
-             "url": "https://github.com/wxWidgets/wxWidgets/releases/download/v3.0.3.1/wxWidgets-3.0.3.1.tar.bz2",
-             "sha256":"3164ad6bc5f61c48d2185b39065ddbe44283eb834a5f62beb13f1d0923e366e4"
-         },
-         {
-             "type": "script",
-             "dest-filename": "autogen.sh",
-             "commands": [
-                 "cp -p /usr/share/automake-*/config.{sub,guess} .",
-                 "autoconf -f -B build/autoconf_prepend-include"
-             ]
-         }
+        {
+         "type": "archive",
+         "url": "https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.1/wxWidgets-3.1.1.tar.bz2",
+         "sha256":"c925dfe17e8f8b09eb7ea9bfdcfcc13696a3e14e92750effd839f5e10726159e"
+        }
+      ]
+    },
+    {
+      "name": "libusb",
+      "config-opts": [
+        "--disable-static"
+      ],
+      "cleanup": [
+        "/include",
+        "/lib/*.la",
+        "/lib/pkgconfig"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://sourceforge.net/projects/libusb/files/libusb-1.0/libusb-1.0.21/libusb-1.0.21.tar.gz",
+          "sha256": "1a5b08c05bc5e38c81c2d59c29954d5916646f4ff46f51381b3f624384e4ac01"
+        }
+      ],
+      "modules": [
+        "shared-modules/udev/udev-175.json"
       ]
     },
     {
       "name": "dolphin-emu",
       "buildsystem": "cmake-ninja",
       "config-opts": [
+        "-DCMAKE_BUILD_TYPE=Release",
         "-DENABLE_ALSA=OFF",
         "-DENABLE_SDL=ON",
         "-DENABLE_EVDEV=OFF",
+        "-DENABLE_WX=ON",
+        "-DENABLE_QT2=OFF",
         "-DDISTRIBUTOR=Flathub"
       ],
       "build-options": {
@@ -75,27 +90,26 @@
           }
         }
       },
-      "cleanup": [ "/bin/dolphin-emu-nogui" ],
+      "cleanup": [
+        "/bin/dolphin-emu-nogui",
+        "/share/man"
+      ],
       "post-install": [
         "install -Dm644 appdata.xml /app/share/appdata/dolphin-emu.appdata.xml"
       ],
       "sources": [
         {
-          "type": "archive",
-          "url": "https://github.com/dolphin-emu/dolphin/archive/5.0.tar.gz",
-          "sha256": "62c4602055767ab314ff50a3b94ea57f792832aa1629e6b1117ebce10518dc0b"
-        },
-        {
-          "type": "patch",
-          "path": "dolphin-emu-5.0-gtk3.patch"
-        },
-        {
-          "type": "patch",
-          "path": "6033250bebe9f5dcec47c4e2ec8e5d3b102f73e7.patch"
+          "type": "git",
+          "url": "https://github.com/dolphin-emu/dolphin.git",
+          "commit": "e7ed4857b1ec3ac382e307806d22ba0c03dae37c"
         },
         {
           "type": "file",
           "path": "appdata.xml"
+        },
+        {
+          "type": "patch",
+          "path": "use-gtk3.patch"
         }
       ]
     }
