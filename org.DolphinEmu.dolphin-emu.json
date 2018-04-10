@@ -90,7 +90,6 @@
         }
       },
       "cleanup": [
-        "/bin/dolphin-emu-nogui",
         "/share/man"
       ],
       "post-install": [
