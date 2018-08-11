@@ -76,6 +76,10 @@
           "commit": "28ca6fec9a77b3c4ea58abce558bd79220a2db7d"
         },
         {
+          "type": "patch",
+          "path": "forcexdg.patch"
+        },
+        {
           "type": "file",
           "path": "appdata.xml"
         }
