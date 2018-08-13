@@ -1,5 +1,5 @@
 diff --git a/Source/Core/UICommon/UICommon.cpp b/Source/Core/UICommon/UICommon.cpp
-index 2055c4d863..fdba657953 100644
+index 2055c4d863..163a15f8a5 100644
 --- a/Source/Core/UICommon/UICommon.cpp
 +++ b/Source/Core/UICommon/UICommon.cpp
 @@ -273,28 +273,11 @@ void SetUserDirectory(const std::string& custom_path)
@@ -31,7 +31,7 @@ index 2055c4d863..fdba657953 100644
        const char* data_home = getenv("XDG_DATA_HOME");
        std::string data_path =
            std::string(data_home && data_home[0] == '/' ? data_home :
-@@ -316,7 +299,6 @@ void SetUserDirectory(const std::string& custom_path)
+@@ -316,11 +299,9 @@ void SetUserDirectory(const std::string& custom_path)
        File::SetUserPath(D_CONFIG_IDX, config_path);
        File::SetUserPath(D_CACHE_IDX, cache_path);
        return;
@@ -39,3 +39,7 @@ index 2055c4d863..fdba657953 100644
  #endif
    }
  #endif
+-  File::SetUserPath(D_USER_IDX, user_path);
+ }
+ 
+ void SaveWiimoteSources()
