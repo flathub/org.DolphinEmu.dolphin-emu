@@ -23,7 +23,7 @@
     <screenshot>https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/4.png</screenshot>
   </screenshots>
   <releases>
-    <release date="2018-11-01" version="5.0-8987"/>
+    <release date="2018-12-05" version="5.0-9204"/>
   </releases>
   <update_contact>b@bpiotrowski.pl</update_contact>
 </application>
