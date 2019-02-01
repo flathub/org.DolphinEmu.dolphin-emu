@@ -73,7 +73,7 @@
         {
           "type": "git",
           "url": "https://github.com/dolphin-emu/dolphin.git",
-          "commit": "2eb85c8fcfca4ce973af11a9b0fc5049dc73d040"
+          "commit": "363ce67459fd48253d2a38cf2528c7465db49911"
         },
         {
           "type": "patch",
