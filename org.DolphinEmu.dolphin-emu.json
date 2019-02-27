@@ -2,7 +2,7 @@
   "app-id": "org.DolphinEmu.dolphin-emu",
   "branch": "stable",
   "runtime": "org.kde.Platform",
-  "runtime-version": "5.11",
+  "runtime-version": "5.12",
   "sdk": "org.kde.Sdk",
   "command": "dolphin-emu",
   "rename-desktop-file": "dolphin-emu.desktop",
@@ -67,7 +67,8 @@
         "/share/man"
       ],
       "post-install": [
-        "install -Dm644 appdata.xml /app/share/appdata/dolphin-emu.appdata.xml"
+        "install -Dm644 appdata.xml /app/share/appdata/dolphin-emu.appdata.xml",
+        "sed -i -e 's/\"2048\"/\"512\"/g' /app/share/icons/hicolor/scalable/apps/dolphin-emu.svg"
       ],
       "sources": [
         {
