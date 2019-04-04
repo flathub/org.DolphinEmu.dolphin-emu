@@ -1,4 +1,3 @@
 [submodule "shared-modules"]
 	path = shared-modules
-	url = https://github.com/Pixelnarium/shared-modules.git
-	branch = udev-fix
+	url = https://github.com/flathub/shared-modules.git
