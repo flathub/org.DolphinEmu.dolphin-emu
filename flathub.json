@@ -1,3 +1,3 @@
 {
-  "skip-arches": ["i386"]
+  "skip-arches": ["i386","arm"]
 }
