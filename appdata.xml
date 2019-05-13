@@ -22,6 +22,9 @@
     <screenshot>https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/3.png</screenshot>
     <screenshot>https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/4.png</screenshot>
   </screenshots>
+  <metadata>
+    <value key="GnomeSoftware::popular-background">https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/org.DolphinEmu.dolphin-emu-thumb.png</value>
+  </metadata>
   <releases>
     <release date="2019-05-07" version="5.0-10161"/>
   </releases>
