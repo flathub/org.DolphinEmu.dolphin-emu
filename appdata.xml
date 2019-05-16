@@ -6,6 +6,7 @@
   <summary>GameCube / Wii / Triforce Emulator</summary>
   <metadata_license>CC-BY-SA-3.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
+  <content_rating type="oars-1.0" />
   <description>
     <p>
       Dolphin is a Gamecube, Wii and Triforce (the arcade machine based on the
