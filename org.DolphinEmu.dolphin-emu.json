@@ -7,7 +7,7 @@
   "command": "dolphin-emu",
   "rename-desktop-file": "dolphin-emu.desktop",
   "rename-icon": "dolphin-emu",
-  "rename-appdata-file": "dolphin-emu.appdata.xml",
+  "rename-appdata-file": "org.DolphinEmu.dolphin-emu.appdata.xml",
   "finish-args": [
     "--device=all",
     "--filesystem=host:ro",
