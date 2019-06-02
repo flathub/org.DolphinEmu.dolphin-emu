@@ -7,16 +7,9 @@
   <metadata_license>CC-BY-SA-3.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <content_rating type="oars-1.0" />
-  <description>
-    <p>
-      Dolphin is a Gamecube, Wii and Triforce (the arcade machine based on the
-      Gamecube) emulator, which supports full HD video with several enhancements such
-      as compatibility with all PC controllers, turbo speed, networked multiplayer,
-      and more. Most games run perfectly or with minor bugs.
-    </p>
-  </description>
-  <url type="homepage">https://dolphin-emu.org/</url>
-  <url type="bugtracker">https://bugs.dolphin-emu.org/projects/emulator/issues</url>
+  <description><p>Dolphin is an emulator for two recent Nintendo video game consoles: the GameCube and the Wii. It allows PC gamers to enjoy games for these two consoles in full HD (1080p) with several enhancements: compatibility with all PC controllers, turbo speed, networked multiplayer, and even more!</p></description>
+  <description xml:lang="pt_BR"><p>O Dolphin é um emulador para dois consoles de vídeo game recentes da Nintendo: o GameCube e o Wii. Ele permite que PC gamers aproveitem jogos destes dois consoles em full HD (1080p) com diversas melhorias: compatibilidade com todos os controles de PC, velocidade turbo, multiplayer em rede e muito mais!</p></description>
+  <description xml:lang="es"><p>Dolphin es un emulador para dos consolas recientes de Nintendo: la GameCube y la Wii. Permite que los jugadores de PC disfruten de los juegos de estas dos consolas en alta definición (1080p) con varias mejoras: compatibilidad con todos los mandos de PC, velocidad turbo, multijugador en red, ¡y mucho más!</p></description>
   <screenshots>
     <screenshot type="default">https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/1.png</screenshot>
     <screenshot>https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/2.png</screenshot>
@@ -26,5 +19,10 @@
   <releases>
     <release date="2019-05-07" version="5.0-10161"/>
   </releases>
+  <url type="homepage">https://dolphin-emu.org</url>
+  <url type="help">https://forums.dolphin-emu.org</url>
+  <url type="faq">https://dolphin-emu.org/docs/faq</url>
+  <url type="translate">https://www.transifex.com/projects/p/dolphin-emu</url>
+  <url type="bugtracker">https://bugs.dolphin-emu.org/projects/emulator/issues</url>
   <update_contact>b@bpiotrowski.pl</update_contact>
 </application>
