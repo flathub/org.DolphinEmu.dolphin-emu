@@ -15,12 +15,7 @@
     "--socket=x11",
     "--share=network",
     "--share=ipc",
-
-    "--talk-name=ca.desrt.dconf",
-    "--filesystem=xdg-run/dconf",
-    "--filesystem=~/.config/dconf:ro",
     "--filesystem=xdg-run/app/com.discordapp.Discord:create",
-    "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
   ],
   "modules": [
     {
