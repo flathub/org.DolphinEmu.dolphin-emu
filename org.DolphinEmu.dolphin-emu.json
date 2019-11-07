@@ -2,7 +2,7 @@
   "app-id": "org.DolphinEmu.dolphin-emu",
   "branch": "stable",
   "runtime": "org.kde.Platform",
-  "runtime-version": "5.12",
+  "runtime-version": "5.13",
   "sdk": "org.kde.Sdk",
   "command": "dolphin-emu-wrapper",
   "rename-desktop-file": "dolphin-emu.desktop",
