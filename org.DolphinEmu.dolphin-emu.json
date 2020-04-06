@@ -2,7 +2,7 @@
   "app-id": "org.DolphinEmu.dolphin-emu",
   "branch": "stable",
   "runtime": "org.kde.Platform",
-  "runtime-version": "5.13",
+  "runtime-version": "5.14",
   "sdk": "org.kde.Sdk",
   "command": "dolphin-emu-wrapper",
   "rename-desktop-file": "dolphin-emu.desktop",
@@ -69,7 +69,7 @@
         {
           "type": "git",
           "url": "https://github.com/dolphin-emu/dolphin.git",
-          "commit": "e323f47cebc979c2147f928620b6907362b8a2ba"
+          "commit": "4ff855921e221f944d5ce22074e86096474d4ea6"
         },
         {
           "type": "patch",
