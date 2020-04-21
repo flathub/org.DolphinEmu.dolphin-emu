@@ -76,6 +76,10 @@
           "path": "forcexdg.patch"
         },
         {
+          "type": "patch",
+          "path": "nodirtyversion.patch"
+        },
+        {
           "type": "file",
           "path": "appdata.xml"
         },
