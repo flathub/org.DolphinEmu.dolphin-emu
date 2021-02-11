@@ -28,6 +28,9 @@
         "/lib/*.la",
         "/lib/pkgconfig"
       ],
+      "post-install": [
+        "ln -s libusb-1.0.so /app/lib/libusb.so"
+      ],
       "sources": [
         {
           "type": "archive",
@@ -44,7 +47,6 @@
         "-DENABLE_ALSA=OFF",
         "-DENABLE_SDL=ON",
         "-DENABLE_EVDEV=OFF",
-        "-DENABLE_WX=OFF",
         "-DDISTRIBUTOR=Flathub"
       ],
       "build-options": {
