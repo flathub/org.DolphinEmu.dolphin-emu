@@ -15,7 +15,8 @@
     "--socket=x11",
     "--share=network",
     "--share=ipc",
-    "--filesystem=xdg-run/app/com.discordapp.Discord:create"
+    "--filesystem=xdg-run/app/com.discordapp.Discord:create",
+    "--talk-name=org.freedesktop.ScreenSaver"
   ],
   "modules": [
     {
@@ -36,6 +37,17 @@
           "type": "archive",
           "url": "https://github.com/libusb/libusb/releases/download/v1.0.23/libusb-1.0.23.tar.bz2",
           "sha256": "db11c06e958a82dac52cf3c65cb4dd2c3f339c8a988665110e0d24d19312ad8d"
+        }
+      ]
+    },
+    {
+      "name": "xdg-screensaver-shim",
+      "buildsystem": "meson",
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://github.com/Unrud/xdg-screensaver-shim/archive/0.0.1.tar.gz",
+          "sha256": "d010e9a882bb48db54fe283d5a56fbac45d445270089c66af0c56a2211e18578"
         }
       ]
     },
