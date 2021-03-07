@@ -46,8 +46,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/Unrud/xdg-screensaver-shim/archive/0.0.1.tar.gz",
-          "sha256": "d010e9a882bb48db54fe283d5a56fbac45d445270089c66af0c56a2211e18578"
+          "url": "https://github.com/Unrud/xdg-screensaver-shim/archive/0.0.2.tar.gz",
+          "sha256": "0ed2a69fe6ee6cbffd2fe16f85116db737f17fb1e79bfb812d893cf15c728399"
         }
       ]
     },
