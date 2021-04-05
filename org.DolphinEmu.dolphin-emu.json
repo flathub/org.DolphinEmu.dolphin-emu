@@ -29,9 +29,6 @@
         "/lib/*.la",
         "/lib/pkgconfig"
       ],
-      "post-install": [
-        "ln -s libusb-1.0.so /app/lib/libusb.so"
-      ],
       "sources": [
         {
           "type": "archive",
@@ -83,7 +80,7 @@
         {
           "type": "git",
           "url": "https://github.com/dolphin-emu/dolphin.git",
-          "commit": "7250d6e4e091f4b5b4f2289c2c732349b69a2e8a"
+          "commit": "5513d5f4f732fb1e436765ab87e7d60ba02b1ad6"
         },
         {
           "type": "patch",
