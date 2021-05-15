@@ -10,6 +10,7 @@
   "rename-appdata-file": "dolphin-emu.appdata.xml",
   "finish-args": [
     "--device=all",
+    "--allow=bluetooth",
     "--filesystem=host:ro",
     "--socket=pulseaudio",
     "--socket=x11",
