@@ -17,7 +17,8 @@
     "--share=network",
     "--share=ipc",
     "--filesystem=xdg-run/app/com.discordapp.Discord:create",
-    "--talk-name=org.freedesktop.ScreenSaver"
+    "--talk-name=org.freedesktop.ScreenSaver",
+    "--system-talk-name=org.bluez"
   ],
   "modules": [
     {
