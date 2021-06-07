@@ -15,6 +15,7 @@
     "--socket=x11",
     "--share=network",
     "--share=ipc",
+    "--allow=bluetooth",
     "--filesystem=xdg-run/app/com.discordapp.Discord:create",
     "--talk-name=org.freedesktop.ScreenSaver"
   ],
