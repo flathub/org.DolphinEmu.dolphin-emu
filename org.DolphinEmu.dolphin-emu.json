@@ -43,10 +43,10 @@
       "config-opts": [
         "--enable-library",
         "--disable-udev",
-	"--disable-tools",
-	"--disable-cups",
-	"--disable-monitor",
-	"--disable-client",
+        "--disable-tools",
+        "--disable-cups",
+        "--disable-monitor",
+        "--disable-client",
         "--disable-systemd",
         "--with-dbusconfdir=/app/etc",
         "--with-dbussessionbusdir=/app/usr/lib/system-services"
