@@ -43,7 +43,14 @@
       "config-opts": [
         "--enable-library",
         "--disable-udev",
+        "--disable-tools",
+        "--disable-cups",
+        "--disable-monitor",
+        "--disable-client",
         "--disable-systemd",
+        "--disable-a2dp",
+        "--disable-avrcp",
+        "--disable-network",
         "--with-dbusconfdir=/app/etc",
         "--with-dbussessionbusdir=/app/usr/lib/system-services"
       ],
