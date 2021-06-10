@@ -34,7 +34,12 @@
         {
           "type": "archive",
           "url": "https://github.com/libusb/libusb/releases/download/v1.0.23/libusb-1.0.23.tar.bz2",
-          "sha256": "db11c06e958a82dac52cf3c65cb4dd2c3f339c8a988665110e0d24d19312ad8d"
+          "sha256": "db11c06e958a82dac52cf3c65cb4dd2c3f339c8a988665110e0d24d19312ad8d",
+          "x-checker-data": {
+            "type": "anitya",
+            "project-id": 1749,
+            "url-template": "https://github.com/libusb/libusb/releases/download/v$version/libusb-$version.tar.bz2"
+          }
         }
       ]
     },
@@ -58,7 +63,12 @@
         {
           "type": "archive",
           "url": "https://www.kernel.org/pub/linux/bluetooth/bluez-5.58.tar.xz",
-          "sha256": "c8065e75a5eb67236849ef68a354b1700540305a8c88ef0a0fd6288f19daf1f1"
+          "sha256": "c8065e75a5eb67236849ef68a354b1700540305a8c88ef0a0fd6288f19daf1f1",
+          "x-checker-data": {
+            "type": "anitya",
+            "project-id": 10029,
+            "url-template": "https://www.kernel.org/pub/linux/bluetooth/bluez-$version.tar.xz"
+          }
         }
       ]
     },
