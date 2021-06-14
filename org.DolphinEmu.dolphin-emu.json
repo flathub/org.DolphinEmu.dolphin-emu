@@ -47,6 +47,7 @@
             "name": "bluez",
             "config-opts": [
                 "--enable-library",
+                "--disable-manpages",
                 "--disable-udev",
                 "--disable-tools",
                 "--disable-cups",
