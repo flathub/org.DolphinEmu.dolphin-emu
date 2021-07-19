@@ -78,7 +78,7 @@ modules:
       - -DCMAKE_BUILD_TYPE=Release
       - -DENABLE_ALSA=OFF
       - -DENABLE_SDL=ON
-      - -DENABLE_EVDEV=OFF
+      - -DENABLE_EVDEV=ON
       - -DDISTRIBUTOR=Flathub
     build-options:
       arch:
