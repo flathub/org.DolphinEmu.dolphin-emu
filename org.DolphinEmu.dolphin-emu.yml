@@ -64,6 +64,16 @@ modules:
           project-id: 10029
           url-template: https://www.kernel.org/pub/linux/bluetooth/bluez-$version.tar.xz
 
+  - name: libevdev
+    buildsystem: meson
+    config-opts:
+      - -Dtests=disabled
+      - -Ddocumentation=disabled
+    sources:
+      - type: archive
+        url: https://www.freedesktop.org/software/libevdev/libevdev-1.11.0.tar.xz
+        sha256: 63f4ea1489858a109080e0b40bd43e4e0903a1e12ea888d581db8c495747c2d0
+
   # needed for screensaver inhibition
   - name: xdg-screensaver-shim
     buildsystem: meson
