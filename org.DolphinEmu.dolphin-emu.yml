@@ -13,6 +13,7 @@ finish-args:
   # game directory feature still needs this
   - --filesystem=host:ro
   - --socket=pulseaudio
+  - --env=QT_QPA_PLATFORM=xcb
   - --socket=x11
   - --share=network
   - --share=ipc
