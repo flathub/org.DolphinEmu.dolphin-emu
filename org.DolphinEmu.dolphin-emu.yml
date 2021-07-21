@@ -64,6 +64,8 @@ modules:
           project-id: 10029
           url-template: https://www.kernel.org/pub/linux/bluetooth/bluez-$version.tar.xz
 
+  # enables motion controls on non-wii controllers (switch, ps4, etc)
+  # requires a udev rule enabling Motion Sensors access
   - name: libevdev
     buildsystem: meson
     config-opts:
