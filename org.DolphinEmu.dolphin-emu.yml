@@ -64,6 +64,22 @@ modules:
           project-id: 10029
           url-template: https://www.kernel.org/pub/linux/bluetooth/bluez-$version.tar.xz
 
+  # enables motion controls on non-wii controllers (switch, ps4, etc)
+  # requires a udev rule enabling Motion Sensors access
+  - name: libevdev
+    buildsystem: meson
+    config-opts:
+      - -Dtests=disabled
+      - -Ddocumentation=disabled
+    sources:
+      - type: archive
+        url: https://www.freedesktop.org/software/libevdev/libevdev-1.11.0.tar.xz
+        sha256: 63f4ea1489858a109080e0b40bd43e4e0903a1e12ea888d581db8c495747c2d0
+        x-checker-data:
+          type: anitya
+          project-id: 20540
+          url-template: https://www.freedesktop.org/software/libevdev/libevdev-$version.tar.xz
+
   # needed for screensaver inhibition
   - name: xdg-screensaver-shim
     buildsystem: meson
@@ -78,7 +94,7 @@ modules:
       - -DCMAKE_BUILD_TYPE=Release
       - -DENABLE_ALSA=OFF
       - -DENABLE_SDL=ON
-      - -DENABLE_EVDEV=OFF
+      - -DENABLE_EVDEV=ON
       - -DDISTRIBUTOR=Flathub
     build-options:
       arch:
