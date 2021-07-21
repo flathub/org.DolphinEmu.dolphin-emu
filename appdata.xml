@@ -21,7 +21,7 @@
     <id>dolphin-emu.desktop</id>
   </provides>
   <releases>
-    <release date="2021-06-06" version="5.0-14344"/>
+    <release date="2021-07-21" version="5.0-14690"/>
   </releases>
   <url type="homepage">https://dolphin-emu.org</url>
   <url type="help">https://forums.dolphin-emu.org</url>
