@@ -113,7 +113,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/dolphin-emu/dolphin.git
-        commit: a1e806ed76e6746259a730a5db82052b53f084f1
+        commit: 3cc274880f47d340bd508dba91aaf37c48acd367
       # prevents dolphin from attempting to write conf files
       # in non-writable paths, typically happens when a user
       # has leftover files from a previous non-flatpak install
