@@ -58,8 +58,8 @@ modules:
       - --with-dbussessionbusdir=/app/usr/lib/system-services
     sources:
       - type: archive
-        url: https://www.kernel.org/pub/linux/bluetooth/bluez-5.60.tar.xz
-        sha256: 710999580d01ee59ec585e5e7c07fd94eddedc001aa26fe7464c546f9d945304
+        url: https://www.kernel.org/pub/linux/bluetooth/bluez-5.61.tar.xz
+        sha256: 83afd6c52179554bfeabbcb538fec2eb6be90a8ac3c40871b49d7ad8b49c423b
         x-checker-data:
           type: anitya
           project-id: 10029
