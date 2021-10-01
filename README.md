@@ -10,16 +10,20 @@ In order to make full usage of your Wii remote you'll want to use one of the oth
 
 When using this method, Dolphin will take direct control of a USB Bluetooth adapter and use it in the same way a real Wii would.
 
-This method gives the most accurate results but has two main drawbacks:
+This method gives the most accurate results, including audio support on the controller, but has two main drawbacks:
 
 - requires a custom udev rule
 - hardware compatibility is limited to a few models.
 
 There's no practical way of installing a udev rule from within a flatpak (at least not without going against flathub rules), so the user must do this manually.
 
-You can read more about this on the project's wiki:
+The project's wiki has information on how to set up the udev rule:
 
-https://wiki.dolphin-emu.org/index.php?title=USB_Passthrough
+https://wiki.dolphin-emu.org/index.php?title=Bluetooth_Passthrough#Linux
+
+Compatibility table:
+
+https://wiki.dolphin-emu.org/index.php?title=Bluetooth_Passthrough#Adapter_test_results
 
 ## Emulate the Wii's Bluetooth adapter
 
