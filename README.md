@@ -1,3 +1,32 @@
+# How to connect your Wii remotes
+
+Dolphin offers three different methods to play your games using real Wii remotes.
+
+The most straightforward one is to pair the wii remote to your computer over bluetooth and use it in the same way you would any other bluetooth controller. However, connecting it this way prevents many features from working correctly and isn't recommended.
+
+In order to make full usage of your Wii remote you'll want to use one of the other two options:
+
+## Passthrough a Bluetooth adapter
+
+When using this method, Dolphin will take direct control of a USB Bluetooth adapter and use it in the same way a real Wii would.
+
+This method gives the most accurate results but has two main drawbacks:
+
+- requires a custom udev rule
+- hardware compatibility is limited to a few models.
+
+There's no practical way of installing a udev rule from within a flatpak (at least not without going against flathub rules), so the user must do this manually.
+
+You can read more about this on the project's wiki:
+
+https://wiki.dolphin-emu.org/index.php?title=USB_Passthrough
+
+## Emulate the Wii's Bluetooth adapter
+
+This method isn't as accurate as passthrough, but it has much better hardware compatibility and doesn't require installing any udev rules.
+
+It only requires ```bluez``` which is bundled with the flatpak, and ```allow=bluetooth``` which is enabled by default in the manifest. Coupled with the improved compatibility this means it should work outside the box for most users.
+
 # Permissions used:
 
 ## device=all
