@@ -2,7 +2,7 @@
 
 Dolphin offers three different methods to play your games using real Wii remotes.
 
-The most straightforward one is to pair the wii remote to your computer over bluetooth and use it in the same way you would any other bluetooth controller. However, connecting it this way prevents many features from working correctly and isn't recommended.
+The most straightforward one is to pair the Wii remote to your computer over Bluetooth and use it in the same way you would any other Bluetooth controller. However, connecting it this way prevents many features from working correctly and isn't recommended.
 
 In order to make full usage of your Wii remote you'll want to use one of the other two options:
 
@@ -12,8 +12,8 @@ When using this method, Dolphin will take direct control of a USB Bluetooth adap
 
 This method gives the most accurate results, including audio support on the controller, but has two main drawbacks:
 
-- requires a custom udev rule
-- hardware compatibility is limited to a few models.
+- Requires a custom udev rule
+- Hardware compatibility is limited to a few models.
 
 There's no practical way of installing a udev rule from within a flatpak (at least not without going against flathub rules), so the user must do this manually.
 
@@ -35,9 +35,9 @@ It only requires ```bluez``` which is bundled with the flatpak, and ```allow=blu
 
 ## device=all
 
-This is required in order for arbitrary gamepads to work, as well as gpu acceleration.
+This is required in order for arbitrary gamepads to work, as well as GPU acceleration.
 
-If you don't like this and don't want gamepad support it is possible to change this to ```device=dri``` so that opengl will still work.
+If you don't like this and don't want gamepad support it is possible to change this to ```device=dri``` so that OpenGl will still work.
 
 ## filesystem=host:ro
 
