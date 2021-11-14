@@ -31,6 +31,16 @@ This method isn't as accurate as passthrough, but it has much better hardware co
 
 It only requires ```bluez``` which is bundled with the flatpak, and ```allow=bluetooth``` which is enabled by default in the manifest. Coupled with the improved compatibility this means it should work outside the box for most users.
 
+# How to enable motion controls on non-wii controllers
+
+Some popular controllers such as those on the nintendo switch and ps4/ps5 feature motion sensors that can be used to approximate some Wii remote features.
+
+Even though his bundle already ships with the necessary dependencies, depending on your distribution you may still need to manually add a udev rule to allow applications to access the motion sensors:
+
+```SUBSYSTEM=="input", KERNEL=="event*", ATTRS{name}=="*Motion Sensors", TAG+="uaccess"```
+
+Fedora users should place this rule under ```/etc/udev/rules.d/```, it should also be the same in most other systems but it could also have slight variations from one distribution to another.
+
 # Permissions used:
 
 ## device=all
