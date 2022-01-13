@@ -1,7 +1,7 @@
 app-id: org.DolphinEmu.dolphin-emu
 branch: stable
 runtime: org.kde.Platform
-runtime-version: '5.15-21.08'
+runtime-version: 5.15-21.08
 sdk: org.kde.Sdk
 command: dolphin-emu-wrapper
 rename-desktop-file: dolphin-emu.desktop
@@ -58,8 +58,8 @@ modules:
       - --with-dbussessionbusdir=/app/usr/lib/system-services
     sources:
       - type: archive
-        url: https://www.kernel.org/pub/linux/bluetooth/bluez-5.62.tar.xz
-        sha256: 38090a5b750e17fc08d3e52178ed8d3254c5f4bd2c48830d5c1955b88e3bc0c2
+        url: https://www.kernel.org/pub/linux/bluetooth/bluez-5.63.tar.xz
+        sha256: 9349e11e8160bb3d720835d271250d8a7424d3690f5289e6db6fe07cc66c6d76
         x-checker-data:
           type: anitya
           project-id: 10029
