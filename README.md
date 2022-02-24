@@ -96,3 +96,9 @@ Can be safely dropped if discord is not used.
 Required for screensaver inhibition during gameplay.
 
 It can be disabled but your screensaver might trigger during gameplay depending on your input device and screensaver configuration.
+
+# Update frequency
+
+We update on beta releases and dolphin progress reports (these usually happen at the same time).
+
+We avoid development releases because netplay requires versions to match exactly for two users to play together. There can be several dev releases in any given day, this would make it difficult for players to match versions.
