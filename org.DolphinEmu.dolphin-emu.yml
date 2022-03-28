@@ -33,8 +33,8 @@ modules:
       - /lib/pkgconfig
     sources:
       - type: archive
-        url: https://github.com/libusb/libusb/releases/download/v1.0.25/libusb-1.0.25.tar.bz2
-        sha256: 8a28ef197a797ebac2702f095e81975e2b02b2eeff2774fa909c78a74ef50849
+        url: https://github.com/libusb/libusb/releases/download/v1.0.26-rc1/libusb-1.0.26-rc1.tar.bz2
+        sha256: b9ad801c643db05771258fdba36706a28188696dc472120e4147a4b73d9ce8b4
         x-checker-data:
           type: anitya
           project-id: 1749
