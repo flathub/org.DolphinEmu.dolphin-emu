@@ -38,6 +38,7 @@ modules:
         x-checker-data:
           type: anitya
           project-id: 1749
+          stable-only: true
           url-template: https://github.com/libusb/libusb/releases/download/v$version/libusb-$version.tar.bz2
 
   # needed for the emulate bluetooth adapter feature to work
@@ -63,6 +64,7 @@ modules:
         x-checker-data:
           type: anitya
           project-id: 10029
+          stable-only: true
           url-template: https://www.kernel.org/pub/linux/bluetooth/bluez-$version.tar.xz
 
   # enables motion controls on non-wii controllers (switch, ps4, etc)
@@ -79,6 +81,7 @@ modules:
         x-checker-data:
           type: anitya
           project-id: 20540
+          stable-only: true
           url-template: https://www.freedesktop.org/software/libevdev/libevdev-$version.tar.xz
 
   # needed for screensaver inhibition
