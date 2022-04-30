@@ -129,5 +129,12 @@ modules:
           - for i in {0..9}; do
           - test -S $XDG_RUNTIME_DIR/discord-ipc-$i || ln -sf {app/com.discordapp.Discord,$XDG_RUNTIME_DIR}/discord-ipc-$i;
           - done
-          - dolphin-emu "$@"
+          # use gtk3 filechooser on steamdeck
+          - bv=`cat /sys/devices/virtual/dmi/id/board_vendor`
+          - bv=$bv`cat /sys/devices/virtual/dmi/id/board_name`
+          - if [[ $bv == "ValveJupiter" ]]; then
+          -   QT_QPA_PLATFORMTHEME=gtk3 dolphin-emu "$@"
+          - else
+          -   dolphin-emu "$@"
+          - fi
         dest-filename: dolphin-emu-wrapper
