@@ -55,6 +55,7 @@ modules:
       - --disable-a2dp
       - --disable-avrcp
       - --disable-network
+      - --disable-obex
       - --with-dbusconfdir=/app/etc
       - --with-dbussessionbusdir=/app/usr/lib/system-services
     sources:
