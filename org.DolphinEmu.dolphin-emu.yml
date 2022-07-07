@@ -111,7 +111,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/dolphin-emu/dolphin.git
-        commit: 8335ec70e5fe253eb21509408ca6b5736ed57dfc
+        commit: 3cd82b619388d0877436390093a6edc2319a6904
       # detects whether dolphin is running in a flatpak sandbox
       # and makes it use xdg directories if it is.
       # prevents dolphin from attempting to write conf files
