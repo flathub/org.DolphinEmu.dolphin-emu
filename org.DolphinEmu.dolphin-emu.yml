@@ -112,6 +112,10 @@ modules:
       - type: git
         url: https://github.com/dolphin-emu/dolphin.git
         commit: 3cd82b619388d0877436390093a6edc2319a6904
+        x-checker-data:
+          type: json
+          url: https://dolphin-emu.org/update/latest/beta
+          commit-query: .hash
       # detects whether dolphin is running in a flatpak sandbox
       # and makes it use xdg directories if it is.
       # prevents dolphin from attempting to write conf files
