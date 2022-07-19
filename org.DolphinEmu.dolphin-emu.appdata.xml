@@ -6,7 +6,7 @@
   <summary>GameCube / Wii / Triforce Emulator</summary>
   <metadata_license>CC-BY-SA-3.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
-  <content_rating type="oars-1.0" />
+  <content_rating type="oars-1.0"/>
   <description><p>Dolphin is an emulator for two recent Nintendo video game consoles: the GameCube and the Wii. It allows PC gamers to enjoy games for these two consoles in full HD (1080p) with several enhancements: compatibility with all PC controllers, turbo speed, networked multiplayer, and even more!</p></description>
   <description xml:lang="pt_BR"><p>O Dolphin é um emulador para dois consoles de vídeo game recentes da Nintendo: o GameCube e o Wii. Ele permite que PC gamers aproveitem jogos destes dois consoles em full HD (1080p) com diversas melhorias: compatibilidade com todos os controles de PC, velocidade turbo, multiplayer em rede e muito mais!</p></description>
   <description xml:lang="es"><p>Dolphin es un emulador para dos consolas recientes de Nintendo: la GameCube y la Wii. Permite que los jugadores de PC disfruten de los juegos de estas dos consolas en alta definición (1080p) con varias mejoras: compatibilidad con todos los mandos de PC, velocidad turbo, multijugador en red, ¡y mucho más!</p></description>
@@ -22,7 +22,7 @@
     <id>dolphin-emu.desktop</id>
   </provides>
   <releases>
-    <release date="2022-07-06" version="5.0-16793"/>
+    <release version="5.0-16793" date="2022-07-06"/>
   </releases>
   <url type="homepage">https://dolphin-emu.org</url>
   <url type="help">https://forums.dolphin-emu.org</url>
