@@ -116,6 +116,8 @@ modules:
           url: https://dolphin-emu.org/update/latest/beta
           commit-query: .hash
           version-query: .shortrev
+          timestamp-query: .date
+          is-main-source: true
       # detects whether dolphin is running in a flatpak sandbox
       # and makes it use xdg directories if it is.
       # prevents dolphin from attempting to write conf files
