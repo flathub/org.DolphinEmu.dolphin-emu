@@ -133,14 +133,11 @@ modules:
       - type: script
         commands:
           - |
-            for i in {0..9}; do
-              test -S $XDG_RUNTIME_DIR/discord-ipc-$i ||
-                ln -sf {app/com.discordapp.Discord,$XDG_RUNTIME_DIR}/discord-ipc-$i;
-            done
+            for socket in $XDG_RUNTIME_DIR/discord-ipc-*; do
+              ln -sf {app/com.discordapp.Discord,$XDG_RUNTIME_DIR}/discord-ipc-${socket##*-}
+            done 2>/dev/null
             # use gtk3 filechooser on steamdeck
-            bv=`cat /sys/devices/virtual/dmi/id/board_vendor`
-            bv=$bv`cat /sys/devices/virtual/dmi/id/board_name`
-            if [[ $bv == "ValveJupiter" ]]; then
+            if [ "$(cat /sys/devices/virtual/dmi/id/{board_vendor,board_name} | tr -d '\n')" = "ValveJupiter" ]; then
               QT_QPA_PLATFORMTHEME=gtk3 dolphin-emu "$@"
             else
               dolphin-emu "$@"
