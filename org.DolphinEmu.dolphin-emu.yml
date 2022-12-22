@@ -137,12 +137,5 @@ modules:
               test -S $XDG_RUNTIME_DIR/discord-ipc-$i ||
                 ln -sf {app/com.discordapp.Discord,$XDG_RUNTIME_DIR}/discord-ipc-$i;
             done
-            # use gtk3 filechooser on steamdeck
-            bv=`cat /sys/devices/virtual/dmi/id/board_vendor`
-            bv=$bv`cat /sys/devices/virtual/dmi/id/board_name`
-            if [[ $bv == "ValveJupiter" ]]; then
-              QT_QPA_PLATFORMTHEME=gtk3 dolphin-emu "$@"
-            else
-              dolphin-emu "$@"
-            fi
+            dolphin-emu "$@"
         dest-filename: dolphin-emu-wrapper
