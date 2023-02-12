@@ -58,8 +58,8 @@ modules:
       - --with-dbussessionbusdir=/app/usr/lib/system-services
     sources:
       - type: archive
-        url: https://www.kernel.org/pub/linux/bluetooth/bluez-5.65.tar.xz
-        sha256: 2565a4d48354b576e6ad92e25b54ed66808296581c8abb80587051f9993d96d4
+        url: https://www.kernel.org/pub/linux/bluetooth/bluez-5.66.tar.xz
+        sha256: 39fea64b590c9492984a0c27a89fc203e1cdc74866086efb8f4698677ab2b574
         x-checker-data:
           type: anitya
           project-id: 10029
@@ -110,7 +110,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/dolphin-emu/dolphin.git
-        commit: 8bad821019721b9b72701b495da95656ace5fea5
+        commit: 46b99671d9158e0ca840c1d8ef249db0f321ced7
         x-checker-data:
           type: json
           url: https://dolphin-emu.org/update/latest/beta
