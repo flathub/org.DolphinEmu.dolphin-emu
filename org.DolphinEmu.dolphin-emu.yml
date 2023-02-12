@@ -55,7 +55,7 @@ modules:
       - --disable-avrcp
       - --disable-network
       - --disable-obex
-      - --disable-bap 
+      - --disable-bap
       - --disable-mcp
       - --with-dbusconfdir=/app/etc
       - --with-dbussessionbusdir=/app/usr/lib/system-services
@@ -113,7 +113,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/dolphin-emu/dolphin.git
-        commit: 8bad821019721b9b72701b495da95656ace5fea5
+        commit: 46b99671d9158e0ca840c1d8ef249db0f321ced7
         x-checker-data:
           type: json
           url: https://dolphin-emu.org/update/latest/beta
