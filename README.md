@@ -51,9 +51,9 @@ If you don't like this and don't want gamepad support it is possible to change t
 
 ## filesystem=host:ro
 
-Grants read-only access to the host file system, Dolphin requires this in order to display the contents of your games directory on the main window.
+Grants read-only access to the host file system. Dolphin requires this in order to display the contents of your games directory on the main window when running on distributions shipping old libraries (tested on debian 10).
 
-You can disable this and dolphin will still work, but you'll need to run games manually through the File->Open menu each time.
+You can safely disable this on reasonably modern distributions.
 
 ## socket=pulseaudio
 
