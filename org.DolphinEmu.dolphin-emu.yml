@@ -54,6 +54,7 @@ modules:
       - --disable-a2dp
       - --disable-avrcp
       - --disable-network
+      - --disable-obex
       - --disable-bap
       - --disable-mcp
       - --with-dbusconfdir=/app/etc
