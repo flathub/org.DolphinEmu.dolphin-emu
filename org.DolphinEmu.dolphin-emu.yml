@@ -16,8 +16,7 @@ finish-args:
   - --socket=x11
   - --share=network
   - --share=ipc
-  # along with the bluez module, required for the
-  # emulated bluetooth adapter feature to work.
+  # required for the emulated bluetooth adapter feature to work.
   - --allow=bluetooth
   - --filesystem=xdg-run/app/com.discordapp.Discord:create
   - --talk-name=org.freedesktop.ScreenSaver
@@ -39,35 +38,6 @@ modules:
           project-id: 1749
           stable-only: true
           url-template: https://github.com/libusb/libusb/releases/download/v$version/libusb-$version.tar.bz2
-
-  # needed for the emulate bluetooth adapter feature to work
-  - name: bluez
-    config-opts:
-      - --enable-library
-      - --disable-manpages
-      - --disable-udev
-      - --disable-tools
-      - --disable-cups
-      - --disable-monitor
-      - --disable-client
-      - --disable-systemd
-      - --disable-a2dp
-      - --disable-avrcp
-      - --disable-network
-      - --disable-obex
-      - --disable-bap
-      - --disable-mcp
-      - --with-dbusconfdir=/app/etc
-      - --with-dbussessionbusdir=/app/usr/lib/system-services
-    sources:
-      - type: archive
-        url: https://www.kernel.org/pub/linux/bluetooth/bluez-5.69.tar.xz
-        sha256: bc5a35ddc7c72d0d3999a0d7b2175c8b7d57ab670774f8b5b4900ff38a2627fc
-        x-checker-data:
-          type: anitya
-          project-id: 10029
-          stable-only: true
-          url-template: https://www.kernel.org/pub/linux/bluetooth/bluez-$version.tar.xz
 
   # enables motion controls on non-wii controllers (switch, ps4, etc)
   # requires a udev rule enabling Motion Sensors access
