@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<component type="desktop">
+  <!--Created with jdAppStreamEdit 8.0-->
+  <id>org.DolphinEmu.dolphin-emu</id>
+  <name>Dolphin Emulator</name>
+  <summary>GameCube / Wii / Triforce Emulator</summary>
+  <developer_name>Dolphin Emulator Project</developer_name>
+  <metadata_license>CC-BY-SA-3.0</metadata_license>
+  <project_license>GPL-2.0-or-later</project_license>
+  <update_contact>b@bpiotrowski.pl</update_contact>
+  <description>
+    <p>Dolphin is an emulator for two recent Nintendo video game consoles: the GameCube and the Wii. It allows PC gamers to enjoy games for these two consoles in full HD (1080p) with several enhancements: compatibility with all PC controllers, turbo speed, networked multiplayer, and even more!</p>
+    <p xml:lang="pt_BR">O Dolphin é um emulador para dois consoles de vídeo game recentes da Nintendo: o GameCube e o Wii. Ele permite que PC gamers aproveitem jogos destes dois consoles em full HD (1080p) com diversas melhorias: compatibilidade com todos os controles de PC, velocidade turbo, multiplayer em rede e muito mais!</p>
+    <p xml:lang="es">Dolphin es un emulador para dos consolas recientes de Nintendo: la GameCube y la Wii. Permite que los jugadores de PC disfruten de los juegos de estas dos consolas en alta definición (1080p) con varias mejoras: compatibilidad con todos los mandos de PC, velocidad turbo, multijugador en red, ¡y mucho más!</p>
+    <p xml:lang="de">Dolphin ist ein Emulator für die beiden Nintendo-Konsolen GameCube und Wii. Er ermöglicht PC-Spielern es, Spiele für beide Konsolen auf dem PC in Full HD (1080p) mit zahlreichen Verbesserungen zu genießen: Unterstützung für alle PC-Gamecontroller, Turbo-Modus für erhöhte Spielgeschwindigkeit, Mehrspielermodus übers Netzwerk und vieles mehr!</p>
+  </description>
+  <screenshots>
+    <screenshot type="default">
+      <image type="source">https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/1.png</image>
+    </screenshot>
+    <screenshot>
+      <image type="source">https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/2.png</image>
+    </screenshot>
+    <screenshot>
+      <image type="source">https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/3.png</image>
+    </screenshot>
+    <screenshot>
+      <image type="source">https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/4.png</image>
+    </screenshot>
+  </screenshots>
+  <releases>
+    <release version="5.0-20347" date="2023-11-17" type="stable"/>
+    <release version="5.0-19870" date="2023-08-10" type="stable"/>
+    <release version="5.0-19368" date="2023-05-11" type="stable"/>
+    <release version="5.0-18498" date="2023-02-03" type="stable"/>
+    <release version="5.0-17995" date="2022-12-04" type="stable"/>
+    <release version="5.0-17269" date="2022-09-03" type="stable"/>
+    <release version="5.0-17210" date="2022-08-19" type="stable"/>
+  </releases>
+  <url type="homepage">https://dolphin-emu.org</url>
+  <url type="bugtracker">https://bugs.dolphin-emu.org/projects/emulator/issues</url>
+  <url type="faq">https://dolphin-emu.org/docs/faq/</url>
+  <url type="help">https://dolphin-emu.org/docs/guides/</url>
+  <url type="translate">https://www.transifex.com/projects/p/dolphin-emu</url>
+  <url type="contact">https://dolphin-emu.org/docs/faq/#ive-got-idea-make-dolphin-better-how-should-i-tell</url>
+  <url type="vcs-browser">https://github.com/dolphin-emu/dolphin</url>
+  <url type="contribute">https://github.com/dolphin-emu/dolphin/blob/master/Contributing.md</url>
+  <content_rating type="oars-1.1"/>
+  <provides>
+    <binary>dolphin-emu</binary>
+    <id>dolphin-emu.desktop</id>
+  </provides>
+</component>
