@@ -97,6 +97,14 @@ Required for screensaver inhibition during gameplay.
 
 It can be disabled but your screensaver might trigger during gameplay depending on your input device and screensaver configuration.
 
+# dolphin-tool
+
+Some cli iso manipulation tasks can be achieved with `dolphin-tool`, it is bundled with the flatpak but not exposed to the outside.
+
+It can be accessed through the `--command` option in `flatpak run`, for instance, checking a game's header would be achieved in this way:
+
+`flatpak run --command=dolphin-tool org.DolphinEmu.dolphin-emu header -i /path/to/file`
+
 # Update frequency
 
 We update on beta releases and dolphin progress reports (these usually happen at the same time).
