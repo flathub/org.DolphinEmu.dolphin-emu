@@ -91,6 +91,12 @@ Necessary for discord (a nonfree messaging service) integration.
 
 Can be safely dropped if discord is not used.
 
+## filesystem=xdg-run/gamescope-0:ro
+
+Necessary for HDR10 support through gamescope.
+
+At the moment the only realistic usage case for this are HDR10 filters if you have an oled steam deck, it can safely be dropped in most other cases.
+
 ## talk-name=org.freedesktop.ScreenSaver
 
 Required for screensaver inhibition during gameplay.
