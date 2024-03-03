@@ -14,10 +14,10 @@
   <description xml:lang="es"><p>Dolphin es un emulador para dos consolas recientes de Nintendo: la GameCube y la Wii. Permite que los jugadores de PC disfruten de los juegos de estas dos consolas en alta definición (1080p) con varias mejoras: compatibilidad con todos los mandos de PC, velocidad turbo, multijugador en red, ¡y mucho más!</p></description>
   <description xml:lang="de"><p>Dolphin ist ein Emulator für die beiden jungen Nintendo-Konsolen GameCube und Wii. Er ermöglicht PC-Spielern die Spiele dieser beiden Konsolen auf dem PC in Full HD (1080p) mit zahlreichen Verbesserungen zu genießen:Unterstützung für alle PC-Gamecontroller, Turbo-Modus für erhöhte Spielgeschwindigkeit, Mehrspielermodus übers Netzwerk und vieles mehr!</p></description>
   <screenshots>
-    <screenshot type="default">https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/1.png</screenshot>
-    <screenshot>https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/2.png</screenshot>
-    <screenshot>https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/3.png</screenshot>
-    <screenshot>https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/4.png</screenshot>
+    <screenshot type="default"><image>https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/1.png</image></screenshot>
+    <screenshot><image>https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/2.png</image></screenshot>
+    <screenshot><image>https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/3.png</image></screenshot>
+    <screenshot><image>https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/4.png</image></screenshot>
   </screenshots>
   <launchable type="desktop-id">dolphin-emu.desktop</launchable>
   <provides>
