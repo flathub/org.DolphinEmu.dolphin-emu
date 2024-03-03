@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2016 Jeremy Newton -->
-<application>
+<component type="desktop-application">
   <id type="desktop">dolphin-emu.desktop</id>
   <name>Dolphin Emulator</name>
   <developer_name>dolphin-emu team</developer_name>
@@ -40,4 +40,4 @@
   <url type="translate">https://www.transifex.com/projects/p/dolphin-emu</url>
   <url type="bugtracker">https://bugs.dolphin-emu.org/projects/emulator/issues</url>
   <update_contact>b@bpiotrowski.pl</update_contact>
-</application>
+</component>
