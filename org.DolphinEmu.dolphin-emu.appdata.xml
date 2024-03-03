@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2016 Jeremy Newton -->
 <component type="desktop-application">
-  <id type="desktop">dolphin-emu.desktop</id>
+  <id>org.DolphinEmu.dolphin-emu</id>
   <name>Dolphin Emulator</name>
   <developer_name>dolphin-emu team</developer_name>
   <summary>GameCube / Wii / Triforce Emulator</summary>
@@ -19,6 +19,7 @@
     <screenshot>https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/3.png</screenshot>
     <screenshot>https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/4.png</screenshot>
   </screenshots>
+  <launchable type="desktop-id">dolphin-emu.desktop</launchable>
   <provides>
     <binary>dolphin-emu</binary>
     <id>dolphin-emu.desktop</id>
