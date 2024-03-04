@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2016 Jeremy Newton -->
 <component type="desktop-application">
-  <id>org.dolphinemu.dolphin-emu</id>
+  <id>org.DolphinEmu.dolphin-emu</id>
   <name>Dolphin Emulator</name>
   <developer_name>dolphin-emu team</developer_name>
   <summary>GameCube / Wii / Triforce Emulator</summary>
