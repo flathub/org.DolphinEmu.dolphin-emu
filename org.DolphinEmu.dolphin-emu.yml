@@ -49,8 +49,8 @@ modules:
       - -Ddocumentation=disabled
     sources:
       - type: archive
-        url: https://www.freedesktop.org/software/libevdev/libevdev-1.13.1.tar.xz
-        sha256: 06a77bf2ac5c993305882bc1641017f5bec1592d6d1b64787bad492ab34f2f36
+        url: https://www.freedesktop.org/software/libevdev/libevdev-1.13.2.tar.xz
+        sha256: 3eca86a6ce55b81d5bce910637fc451c8bbe373b1f9698f375c7f1ad0de3ac48
         x-checker-data:
           type: anitya
           project-id: 20540
@@ -84,7 +84,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/dolphin-emu/dolphin.git
-        commit: a9544510468740b77cf06ef28daaa65fe247fd32
+        commit: b92e354389bb7c0bd114a8631b8af110d3cb3a14
         x-checker-data:
           type: json
           url: https://dolphin-emu.org/update/latest/beta
