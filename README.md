@@ -19,6 +19,8 @@
     - [talk-name=org.freedesktop.ScreenSaver](#talk-nameorgfreedesktopscreensaver)
 - [dolphin-tool](#dolphin-tool)
 - [Update Frequency](#update-frequency)
+    - [Official Releases](#official-releases)
+    - [Development Releases](#development-releases)
 
 ## How to connect your Wii remotes
 
@@ -37,7 +39,7 @@ This method gives the most accurate results, including audio support on the cont
 - Requires a custom udev rule
 - Hardware compatibility is limited to a few models.
 
-There's no practical way of installing a udev rule from within a flatpak (at least not without going against flathub rules), so the user must do this manually.
+There's no practical way of installing a udev rule from within a Flatpak (at least not without going against flathub rules), so the user must do this manually.
 
 The project's wiki has information on how to set up the udev rule:
 
@@ -51,7 +53,7 @@ https://wiki.dolphin-emu.org/index.php?title=Bluetooth_Passthrough#Adapter_test_
 
 This method isn't as accurate as passthrough, but it has much better hardware compatibility and doesn't require installing any udev rules.
 
-It only requires ```bluez``` which is bundled with the flatpak, and ```allow=bluetooth``` which is enabled by default in the manifest. Coupled with the improved compatibility this means it should work outside the box for most users.
+It only requires ```bluez``` which is bundled with the Flatpak, and ```allow=bluetooth``` which is enabled by default in the manifest. Coupled with the improved compatibility this means it should work outside the box for most users.
 
 ## How to enable motion controls on non-Wii controllers
 
@@ -127,7 +129,7 @@ It can be disabled but your screensaver might trigger during gameplay depending 
 
 ## dolphin-tool
 
-Some cli iso manipulation tasks can be achieved with `dolphin-tool`, it is bundled with the flatpak but not exposed through the Dolphin GUI.
+Some cli iso manipulation tasks can be achieved with `dolphin-tool`, it is bundled with the Flatpak but not exposed outside of the Flatpak sandbox.
 
 It can be accessed through the `--command` option in `flatpak run`, for instance, checking a game's header would be achieved in this way:
 
@@ -135,6 +137,18 @@ It can be accessed through the `--command` option in `flatpak run`, for instance
 
 ## Update Frequency
 
-The Flatpak updates in accordance to the official "Releases" on the [Dolphin website](https://dolphin-emu.org/download/) and Dolphin progress reports (these usually happen at the same time).
+### Official Releases
 
-For development releases, you may use the Flathub Beta repository. For instructions on how to add the Flathub Beta repository, see [https://docs.flathub.org/docs/for-users/installation/](https://docs.flathub.org/docs/for-users/installation/). If you use the development version, keep in mind that the development build updates frequently making it difficult for players to match versions. If you would like to use netplay, it is highly recommended you use the official "Release" build instead.
+The Flatpak updates in accordance to the official "Releases" on the [Dolphin website](https://dolphin-emu.org/download/) and [Dolphin progress reports](https://dolphin-emu.org/blog/) (these usually happen at the same time).
+
+### Development Releases
+
+The Flatpak pushes "Development" releases regularly to the Flathub Beta repository. These versions are in accordance to the "Development" releases on the [Dolphin website](https://dolphin-emu.org/download/). Note that even though these versions may release frequently, the Flatpak will not update on every "Development" release. 
+
+For instructions on how to add the Flathub Beta repository, see [https://docs.flathub.org/docs/for-users/installation/](https://docs.flathub.org/docs/for-users/installation/). If you would like to use netplay, it is highly recommended you use the official "Release" build instead. The "Development" build updates frequently making it difficult for players to match versions. 
+
+If you have both the official "Release" and the "Development" release installed simultaneously, you may set the active version with the following command (Beta referring to the "Development" branch and Stable referring to the "Development" branch):
+
+```
+`flatpak make-current org.DolphinEmu.dolphin-emu <beta|stable>` 
+```
