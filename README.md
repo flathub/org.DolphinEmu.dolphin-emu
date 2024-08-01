@@ -150,5 +150,5 @@ For instructions on how to add the Flathub Beta repository, see [https://docs.fl
 If you have both the official "Release" and the "Development" release installed simultaneously, you may set the active version with the following command (Beta referring to the "Development" branch and Stable referring to the official "Releases"):
 
 ```
-`flatpak make-current org.DolphinEmu.dolphin-emu <beta|stable>` 
+flatpak make-current org.DolphinEmu.dolphin-emu <beta|stable>
 ```
