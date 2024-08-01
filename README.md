@@ -1,4 +1,28 @@
-# How to connect your Wii remotes
+# README
+
+## Table of Contents
+
+- [How to connect your Wii remotes](#how-to-connect-your-wii-remotes)
+- [Passthrough a Bluetooth adapter](#passthrough-a-bluetooth-adapter)
+- [Emulate the Wii's Bluetooth adapter](#emulate-the-wiis-bluetooth-adapter)
+- [How to enable motion controls on non-Wii controllers](#how-to-enable-motion-controls-on-non-wii-controllers)
+- [Permissions Used](#permissions-used)
+    - [device=all](#deviceall)
+    - [filesystem=host:ro](#filesystemhostro)
+    - [socket=pulseaudio](#socketpulseaudio)
+    - [env=QT_QPA_PLATFORM=xcb](#envqt_qpa_platformxcb)
+    - [socket=x11](#socketx11)
+    - [share=network](#sharenetwork)
+    - [share=ipc](#shareipc)
+    - [allow=bluetooth](#allowbluetooth)
+    - [filesystem=xdg-run/app/com.discordapp.Discord:create](#filesystemxdg-runappcomdiscordappdiscordcreate)
+    - [talk-name=org.freedesktop.ScreenSaver](#talk-nameorgfreedesktopscreensaver)
+- [dolphin-tool](#dolphin-tool)
+- [Update Frequency](#update-frequency)
+    - [Official Releases](#official-releases)
+    - [Development Releases](#development-releases)
+
+## How to connect your Wii remotes
 
 Dolphin offers three different methods to play your games using real Wii remotes.
 
@@ -15,7 +39,7 @@ This method gives the most accurate results, including audio support on the cont
 - Requires a custom udev rule
 - Hardware compatibility is limited to a few models.
 
-There's no practical way of installing a udev rule from within a flatpak (at least not without going against flathub rules), so the user must do this manually.
+There's no practical way of installing a udev rule from within a Flatpak (at least not without going against flathub rules), so the user must do this manually.
 
 The project's wiki has information on how to set up the udev rule:
 
@@ -29,9 +53,9 @@ https://wiki.dolphin-emu.org/index.php?title=Bluetooth_Passthrough#Adapter_test_
 
 This method isn't as accurate as passthrough, but it has much better hardware compatibility and doesn't require installing any udev rules.
 
-It only requires ```bluez``` which is bundled with the flatpak, and ```allow=bluetooth``` which is enabled by default in the manifest. Coupled with the improved compatibility this means it should work outside the box for most users.
+It only requires ```bluez``` which is bundled with the Flatpak, and ```allow=bluetooth``` which is enabled by default in the manifest. Coupled with the improved compatibility this means it should work outside the box for most users.
 
-# How to enable motion controls on non-wii controllers
+## How to enable motion controls on non-Wii controllers
 
 Some popular controllers such as those on the nintendo switch and ps4/ps5 feature motion sensors that can be used to approximate some Wii remote features.
 
@@ -41,35 +65,35 @@ Even though his bundle already ships with the necessary dependencies, depending 
 
 Fedora users should place this rule under ```/etc/udev/rules.d/```, it should also be the same in most other systems but it could also have slight variations from one distribution to another.
 
-# Permissions used:
+## Permissions Used
 
-## device=all
+### device=all
 
 This is required in order for arbitrary gamepads to work, as well as GPU acceleration.
 
 If you don't like this and don't want gamepad support it is possible to change this to ```device=dri``` so that OpenGl will still work.
 
-## filesystem=host:ro
+### filesystem=host:ro
 
 Grants read-only access to the host file system. Dolphin requires this in order to display the contents of your games directory on the main window when running on distributions shipping old libraries (tested on debian 10).
 
 You can safely disable this on reasonably modern distributions.
 
-## socket=pulseaudio
+### socket=pulseaudio
 
 Dolphin needs this to play audio.
 
-## env=QT_QPA_PLATFORM=xcb
+### env=QT_QPA_PLATFORM=xcb
 
 This env variable fixes a hypothetical case that could prevent Dolphin from running if it were set to wayland, it's unlikely but we keep it just in case.
 
 Usually this would only happen if the user had globally set the variable in order to force qt applications to run on native wayland mode, otherwise it is safe to drop.
 
-## socket=x11
+### socket=x11
 
 Necessary in order to display the window, Dolphin has no wayland support at this point.
 
-## share=network
+### share=network
 
 It's required by some features to work, such as netplay, firmware updates and the optional telemetry.
 
@@ -79,40 +103,52 @@ It's safe to disable if you don't want those features.
 
 Graphical applications will run slowly without this.
 
-## allow=bluetooth
+### allow=bluetooth
 
 Only necessary when using "Real Wii remotes" in conjunction with the feature labeled "Emulate the Wii's Bluetooth adapter".
 
 It's safe to disable if that feature is not in use, generic bluetooth gamepads will still work without it. Actual Wii remotes can also work without this option when using the separate passthrough feature.
 
-## filesystem=xdg-run/app/com.discordapp.Discord:create
+### filesystem=xdg-run/app/com.discordapp.Discord:create
 
 Necessary for discord (a nonfree messaging service) integration.
 
 Can be safely dropped if discord is not used.
 
-## filesystem=xdg-run/gamescope-0:ro
+### filesystem=xdg-run/gamescope-0:ro
 
 Necessary for HDR10 support through gamescope.
 
 At the moment the only realistic usage case for this are HDR10 filters if you have an oled steam deck, it can safely be dropped in most other cases.
 
-## talk-name=org.freedesktop.ScreenSaver
+### talk-name=org.freedesktop.ScreenSaver
 
 Required for screensaver inhibition during gameplay.
 
 It can be disabled but your screensaver might trigger during gameplay depending on your input device and screensaver configuration.
 
-# dolphin-tool
+## dolphin-tool
 
-Some cli iso manipulation tasks can be achieved with `dolphin-tool`, it is bundled with the flatpak but not exposed to the outside.
+Some cli iso manipulation tasks can be achieved with `dolphin-tool`, it is bundled with the Flatpak but not exposed outside of the Flatpak sandbox.
 
 It can be accessed through the `--command` option in `flatpak run`, for instance, checking a game's header would be achieved in this way:
 
 `flatpak run --command=dolphin-tool org.DolphinEmu.dolphin-emu header -i /path/to/file`
 
-# Update frequency
+## Update Frequency
 
-We update on beta releases and dolphin progress reports (these usually happen at the same time).
+### Official Releases
 
-We avoid development releases because netplay requires versions to match exactly for two users to play together. There can be several dev releases in any given day, this would make it difficult for players to match versions.
+The Flatpak updates in accordance to the official "Releases" on the [Dolphin website](https://dolphin-emu.org/download/) and [Dolphin progress reports](https://dolphin-emu.org/blog/) (these usually happen at the same time).
+
+### Development Releases
+
+The Flatpak pushes "Development" releases regularly to the Flathub Beta repository. These versions are in accordance to the "Development" releases on the [Dolphin website](https://dolphin-emu.org/download/). Note that even though these versions may release frequently, the Flatpak will not update on every "Development" release. 
+
+For instructions on how to add the Flathub Beta repository, see [https://docs.flathub.org/docs/for-users/installation/](https://docs.flathub.org/docs/for-users/installation/). If you would like to use netplay, it is highly recommended you use the official "Release" build instead. The "Development" build updates frequently making it difficult for players to match versions. 
+
+If you have both the official "Release" and the "Development" release installed simultaneously, you may set the active version with the following command (Beta referring to the "Development" branch and Stable referring to the official "Releases"):
+
+```
+flatpak make-current org.DolphinEmu.dolphin-emu <beta|stable>
+```
