@@ -147,7 +147,7 @@ The Flatpak pushes "Development" releases regularly to the Flathub Beta reposito
 
 For instructions on how to add the Flathub Beta repository, see [https://docs.flathub.org/docs/for-users/installation/](https://docs.flathub.org/docs/for-users/installation/). If you would like to use netplay, it is highly recommended you use the official "Release" build instead. The "Development" build updates frequently making it difficult for players to match versions. 
 
-If you have both the official "Release" and the "Development" release installed simultaneously, you may set the active version with the following command (Beta referring to the "Development" branch and Stable referring to the "Development" branch):
+If you have both the official "Release" and the "Development" release installed simultaneously, you may set the active version with the following command (Beta referring to the "Development" branch and Stable referring to the official "Releases"):
 
 ```
 `flatpak make-current org.DolphinEmu.dolphin-emu <beta|stable>` 
