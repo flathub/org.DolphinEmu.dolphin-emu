@@ -1,0 +1,15 @@
+diff --git a/CMake/ScmRevGen.cmake b/CMake/ScmRevGen.cmake
+index e1b5bb2d62..76768de249 100644
+--- a/CMake/ScmRevGen.cmake
++++ b/CMake/ScmRevGen.cmake
+@@ -7,9 +7,7 @@ if(GIT_FOUND)
+       OUTPUT_VARIABLE DOLPHIN_WC_REVISION
+       OUTPUT_STRIP_TRAILING_WHITESPACE)
+   # defines DOLPHIN_WC_DESCRIBE
+-  execute_process(WORKING_DIRECTORY ${PROJECT_SOURCE_DIR} COMMAND ${GIT_EXECUTABLE} describe --always --long --dirty
+-      OUTPUT_VARIABLE DOLPHIN_WC_DESCRIBE
+-      OUTPUT_STRIP_TRAILING_WHITESPACE)
++  set(DOLPHIN_WC_DESCRIBE "2407-117")
+ 
+   # remove hash (and trailing "-0" if needed) from description
+   string(REGEX REPLACE "(-0)?-[^-]+((-dirty)?)$" "\\2" DOLPHIN_WC_DESCRIBE "${DOLPHIN_WC_DESCRIBE}")
