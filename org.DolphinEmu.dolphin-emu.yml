@@ -101,8 +101,10 @@ modules:
       - type: patch
         path: detectflatpak.patch
       # version strings must match exactly for online multiplayer
+      # the build script reads the version string from the tags,
+      # but we don't have those when building from a shallow clone
       - type: patch
-        path: nodirtyversion.patch
+        path: forceversion.patch
       - type: file
         path: org.DolphinEmu.dolphin-emu.appdata.xml
       - type: script
