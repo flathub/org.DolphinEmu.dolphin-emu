@@ -77,7 +77,7 @@ modules:
       - /share/man
     post-install:
       - install -D -t ${FLATPAK_DEST}/bin/ dolphin-emu-wrapper
-      - install -Dm644 -t ${FLATPAK_DEST}/share/appdata/ org.DolphinEmu.dolphin-emu.appdata.xml
+      - install -Dm644 -t ${FLATPAK_DEST}/share/metainfo/ org.DolphinEmu.dolphin-emu.metainfo.xml
       - sed -i -e 's/viewBox="0 0 1024.02 571.29"/viewBox="0 -285.645 1024 1024" width="2048"
         height="2048"/g' /app/share/icons/hicolor/scalable/apps/dolphin-emu.svg
       - desktop-file-edit --set-key=Exec --set-value='/app/bin/dolphin-emu-wrapper'
@@ -104,7 +104,7 @@ modules:
       - type: patch
         path: nodirtyversion.patch
       - type: file
-        path: org.DolphinEmu.dolphin-emu.appdata.xml
+        path: org.DolphinEmu.dolphin-emu.metainfo.xml
       - type: script
         commands:
           - |
