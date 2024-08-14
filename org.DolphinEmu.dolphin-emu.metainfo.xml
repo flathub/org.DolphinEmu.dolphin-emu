@@ -3,7 +3,9 @@
 <component type="desktop-application">
   <id>org.DolphinEmu.dolphin-emu</id>
   <name>Dolphin Emulator</name>
-  <developer_name>dolphin-emu team</developer_name>
+  <developer id="org.dolphin-emu">
+    <name>Dolphin Emulator Project</name>
+  </developer>
   <summary>GameCube / Wii / Triforce Emulator</summary>
   <metadata_license>CC-BY-SA-3.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
@@ -11,10 +13,22 @@
   <!-- Descriptions taken from Dolphin Homepage -->
   <description><p>Dolphin is an emulator for two recent Nintendo video game consoles: the GameCube and the Wii. It allows PC gamers to enjoy games for these two consoles in full HD (1080p) with several enhancements: compatibility with all PC controllers, turbo speed, networked multiplayer, and even more!</p></description>
   <screenshots>
-    <screenshot type="default"><image>https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/1.png</image></screenshot>
-    <screenshot><image>https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/2.png</image></screenshot>
-    <screenshot><image>https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/3.png</image></screenshot>
-    <screenshot><image>https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/4.png</image></screenshot>
+    <screenshot type="default">
+      <caption>Dolpin's main window</caption>
+      <image type="source">https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/1.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>In-game</caption>
+      <image type="source">https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/2.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Grapics configuration</caption>
+      <image type="source">https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/3.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Controller configuration</caption>
+      <image type="source">https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/4.png</image>
+    </screenshot>
   </screenshots>
   <launchable type="desktop-id">dolphin-emu.desktop</launchable>
   <provides>
@@ -36,9 +50,12 @@
     <release version="5.0-17210" date="2022-08-19"/>
   </releases>
   <url type="homepage">https://dolphin-emu.org</url>
-  <url type="help">https://forums.dolphin-emu.org</url>
-  <url type="faq">https://dolphin-emu.org/docs/faq</url>
-  <url type="translate">https://www.transifex.com/projects/p/dolphin-emu</url>
   <url type="bugtracker">https://bugs.dolphin-emu.org/projects/emulator/issues</url>
+  <url type="faq">https://dolphin-emu.org/docs/faq/</url>
+  <url type="help">https://dolphin-emu.org/docs/guides/</url>
+  <url type="translate">https://www.transifex.com/projects/p/dolphin-emu</url>
+  <url type="contact">https://dolphin-emu.org/docs/faq/#ive-got-idea-make-dolphin-better-how-should-i-tell</url>
+  <url type="vcs-browser">https://github.com/dolphin-emu/dolphin</url>
+  <url type="contribute">https://github.com/dolphin-emu/dolphin/blob/master/Contributing.md</url>
   <update_contact>b@bpiotrowski.pl</update_contact>
 </component>
