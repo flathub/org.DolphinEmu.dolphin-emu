@@ -3,7 +3,9 @@
 <component type="desktop-application">
   <id>org.DolphinEmu.dolphin-emu</id>
   <name>Dolphin Emulator</name>
-  <developer_name>dolphin-emu team</developer_name>
+  <developer id="org.dolphin-emu">
+    <name>Dolphin Emulator Project</name>
+  </developer>
   <summary>GameCube / Wii / Triforce Emulator</summary>
   <metadata_license>CC-BY-SA-3.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
