@@ -22,6 +22,7 @@
     <id>dolphin-emu.desktop</id>
   </provides>
   <releases>
+    <release version="2407-193" date="2024-08-14"/>
     <release version="2407-187" date="2024-08-14"/>
     <release version="2407-183" date="2024-08-13"/>
     <release version="2407-177" date="2024-08-11"/>
