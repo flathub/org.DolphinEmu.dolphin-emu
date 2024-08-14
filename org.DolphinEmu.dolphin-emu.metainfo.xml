@@ -50,9 +50,12 @@
     <release version="5.0-17210" date="2022-08-19"/>
   </releases>
   <url type="homepage">https://dolphin-emu.org</url>
-  <url type="help">https://forums.dolphin-emu.org</url>
-  <url type="faq">https://dolphin-emu.org/docs/faq</url>
-  <url type="translate">https://www.transifex.com/projects/p/dolphin-emu</url>
   <url type="bugtracker">https://bugs.dolphin-emu.org/projects/emulator/issues</url>
+  <url type="faq">https://dolphin-emu.org/docs/faq/</url>
+  <url type="help">https://dolphin-emu.org/docs/guides/</url>
+  <url type="translate">https://www.transifex.com/projects/p/dolphin-emu</url>
+  <url type="contact">https://dolphin-emu.org/docs/faq/#ive-got-idea-make-dolphin-better-how-should-i-tell</url>
+  <url type="vcs-browser">https://github.com/dolphin-emu/dolphin</url>
+  <url type="contribute">https://github.com/dolphin-emu/dolphin/blob/master/Contributing.md</url>
   <update_contact>b@bpiotrowski.pl</update_contact>
 </component>
