@@ -65,6 +65,9 @@ modules:
         url: https://github.com/Unrud/xdg-screensaver-shim/archive/0.0.2.tar.gz
         sha256: 0ed2a69fe6ee6cbffd2fe16f85116db737f17fb1e79bfb812d893cf15c728399
 
+  # The kde runtime bundles 2.28.5 but current dolphin versions require 2.30.6
+  - SDL2/SDL2-no-libdecor.json
+
   - name: dolphin-emu
     buildsystem: cmake-ninja
     config-opts:
@@ -83,7 +86,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/dolphin-emu/dolphin.git
-        commit: c9af09eca7e754954b873931b6ccbd75ca4ddfd3
+        commit: 46454f9b4e1515a4cd4aa7f2f2d0a6b8a474f83c
         x-checker-data:
           type: json
           url: https://dolphin-emu.org/update/latest/dev
