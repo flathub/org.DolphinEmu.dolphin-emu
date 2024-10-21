@@ -86,7 +86,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/dolphin-emu/dolphin.git
-        commit: da530a2eb9d217821a0afcfb0478b62a2672112f
+        commit: 24e9fc120c1b02b78cbf854c0eae78df0dbb60c1
         x-checker-data:
           type: json
           url: https://dolphin-emu.org/update/latest/dev
