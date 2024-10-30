@@ -21,6 +21,7 @@
 - [Update Frequency](#update-frequency)
     - [Official Releases](#official-releases)
     - [Development Releases](#development-releases)
+- [Official Builds](#official-builds)
 
 ## How to connect your Wii remotes
 
@@ -152,3 +153,13 @@ If you have both the official "Release" and the "Development" release installed 
 ```
 flatpak make-current org.DolphinEmu.dolphin-emu <beta|stable>
 ```
+
+## Official Builds
+
+As of `2409-260` official dev builds are available from this repo:
+
+https://flatpak.dolphin-emu.org/dev.flatpakrepo
+
+Single file bundles for `2409-260+` versions are available from the downloads section of the official dolphin site:
+
+https://dolphin-emu.org/download/
