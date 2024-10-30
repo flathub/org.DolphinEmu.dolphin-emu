@@ -9,7 +9,7 @@ index e1b5bb2d62..81b713bc94 100644
 -  execute_process(WORKING_DIRECTORY ${PROJECT_SOURCE_DIR} COMMAND ${GIT_EXECUTABLE} rev-parse HEAD
 -      OUTPUT_VARIABLE DOLPHIN_WC_REVISION
 -      OUTPUT_STRIP_TRAILING_WHITESPACE)
-+  set(DOLPHIN_WC_REVISION "2409-254")
++  set(DOLPHIN_WC_REVISION "2409-262")
    # defines DOLPHIN_WC_DESCRIBE
 -  execute_process(WORKING_DIRECTORY ${PROJECT_SOURCE_DIR} COMMAND ${GIT_EXECUTABLE} describe --always --long --dirty
 -      OUTPUT_VARIABLE DOLPHIN_WC_DESCRIBE
@@ -17,7 +17,7 @@ index e1b5bb2d62..81b713bc94 100644
 -
 -  # remove hash (and trailing "-0" if needed) from description
 -  string(REGEX REPLACE "(-0)?-[^-]+((-dirty)?)$" "\\2" DOLPHIN_WC_DESCRIBE "${DOLPHIN_WC_DESCRIBE}")
-+  set(DOLPHIN_WC_DESCRIBE "2409-254")
++  set(DOLPHIN_WC_DESCRIBE "2409-262")
  
    # defines DOLPHIN_WC_BRANCH
    execute_process(WORKING_DIRECTORY ${PROJECT_SOURCE_DIR} COMMAND ${GIT_EXECUTABLE} rev-parse --abbrev-ref HEAD
