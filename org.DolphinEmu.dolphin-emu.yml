@@ -80,8 +80,6 @@ modules:
       - install -Dm644 -t ${FLATPAK_DEST}/share/metainfo/ org.DolphinEmu.dolphin-emu.metainfo.xml
       - desktop-file-edit --set-key=Exec --set-value='/app/bin/dolphin-emu-wrapper'
         /app/share/applications/dolphin-emu.desktop
-      # Temporary workaround until libfmt is added to the runtime
-      - cp /lib/*-linux-gnu/libfmt* /app/lib/
     sources:
       - type: git
         url: https://github.com/dolphin-emu/dolphin.git
