@@ -100,5 +100,6 @@ modules:
               test -S $XDG_RUNTIME_DIR/discord-ipc-$i ||
                 ln -sf {app/com.discordapp.Discord,$XDG_RUNTIME_DIR}/discord-ipc-$i;
             done
+            zenity --warning --text "You won't receive any further updates on this branch.\n\nDolphin dev builds on flathub-beta are being phased out.\n\nSwitch to regular flathub for stable builds.\n\nMore information <a href='https://github.com/flathub/org.DolphinEmu.dolphin-emu/blob/master/README.md#beta-branch'>here</a>" --width=500
             dolphin-emu "$@"
         dest-filename: dolphin-emu-wrapper
