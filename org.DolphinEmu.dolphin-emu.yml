@@ -77,27 +77,22 @@ modules:
       - /share/man
     post-install:
       - install -D -t ${FLATPAK_DEST}/bin/ dolphin-emu-wrapper
-      - install -Dm644 -t ${FLATPAK_DEST}/share/appdata/ org.DolphinEmu.dolphin-emu.appdata.xml
+      - install -Dm644 -t ${FLATPAK_DEST}/share/metainfo/ org.DolphinEmu.dolphin-emu.metainfo.xml
       - desktop-file-edit --set-key=Exec --set-value='/app/bin/dolphin-emu-wrapper'
         /app/share/applications/dolphin-emu.desktop
     sources:
       - type: git
         url: https://github.com/dolphin-emu/dolphin.git
-        commit: a68ae37df7168464459f395d2af3bee979a146ad
+        commit: 992b4ea9309899ebc7ca576ebea711a70523098a
         x-checker-data:
           type: json
-          url: https://dolphin-emu.org/update/latest/dev
+          url: https://dolphin-emu.org/update/latest/beta
           commit-query: .hash
           version-query: .shortrev
           timestamp-query: .date
           is-main-source: true
-      # version strings must match exactly for online multiplayer
-      # the build script reads the version string from the tags,
-      # but we don't have those when building from a shallow clone
-      - type: patch
-        path: forceversion.patch
       - type: file
-        path: org.DolphinEmu.dolphin-emu.appdata.xml
+        path: org.DolphinEmu.dolphin-emu.metainfo.xml
       - type: script
         commands:
           - |
