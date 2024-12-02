@@ -22,6 +22,7 @@
     - [Official Releases](#official-releases)
     - [Development Releases](#development-releases)
 - [Official Builds](#official-builds)
+- [Beta Branch](#beta-branch)
 
 ## How to connect your Wii remotes
 
@@ -163,3 +164,15 @@ https://flatpak.dolphin-emu.org/dev.flatpakrepo
 Single file bundles for `2409-260+` versions are available from the downloads section of the official dolphin site:
 
 https://dolphin-emu.org/download/
+
+## Beta Branch
+
+The beta branch is being retired, there won't be any further updates after `2412`.
+
+Switch back to the stable branch in order to receive further updates (drop the `--user` at the end if you've installed dolphin-emu at the system level):
+
+```
+flatpak make-current org.DolphinEmu.dolphin-emu stable --user
+```
+
+If for any reason you'd rather keep getting dev builds, switch to the official dev repo instead.
