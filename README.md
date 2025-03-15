@@ -125,9 +125,13 @@ At the moment the only realistic usage case for this are HDR10 filters if you ha
 
 ### talk-name=org.freedesktop.ScreenSaver
 
-Required for screensaver inhibition during gameplay.
+Also `--talk-name=org.xfce.ScreenSaver` and `--talk-name=org.mate.ScreenSaver`.
 
-It can be disabled but your screensaver might trigger during gameplay depending on your input device and screensaver configuration.
+These are required for screensaver inhibition during gameplay on systems with old or defective portal implementations.
+
+If you're on a desktop with a newer portal implementation it's safe to disable all of these.
+
+You can also disable them on older systems, but your screensaver might trigger during gameplay depending on your input device and screensaver configuration.
 
 ## dolphin-tool
 
