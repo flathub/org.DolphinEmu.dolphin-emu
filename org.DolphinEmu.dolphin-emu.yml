@@ -36,8 +36,8 @@ modules:
       - /lib/pkgconfig
     sources:
       - type: archive
-        url: https://github.com/libusb/libusb/releases/download/v1.0.28/libusb-1.0.28.tar.bz2
-        sha256: 966bb0d231f94a474eaae2e67da5ec844d3527a1f386456394ff432580634b29
+        url: https://github.com/libusb/libusb/releases/download/v1.0.29/libusb-1.0.29.tar.bz2
+        sha256: 5977fc950f8d1395ccea9bd48c06b3f808fd3c2c961b44b0c2e6e29fc3a70a85
         x-checker-data:
           type: anitya
           project-id: 1749
@@ -79,7 +79,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/dolphin-emu/dolphin.git
-        commit: 0827d9f06d2b467926ede9a636d51075495c2859
+        commit: aed420c95d7a152363917e4b827d6cc85eacb502
         x-checker-data:
           type: json
           url: https://dolphin-emu.org/update/latest/beta
