@@ -36,8 +36,11 @@
     <id>dolphin-emu.desktop</id>
   </provides>
   <releases>
-    <release version="2506" date="2025-06-04">
+    <release version="2506a" date="2025-06-05">
       <description></description>
+    </release>
+    <release version="2506" date="2025-06-04">
+      <description/>
     </release>
     <release version="2503a" date="2025-04-21">
       <description/>
