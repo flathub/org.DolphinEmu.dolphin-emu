@@ -50,6 +50,7 @@ modules:
       - -DENABLE_ALSA=OFF
       - -DENABLE_SDL=ON
       - -DENABLE_EVDEV=ON
+      - -DUSE_SYSTEM_SDL3=OFF
       - -DDISTRIBUTOR=Flathub
     cleanup:
       - /share/man
