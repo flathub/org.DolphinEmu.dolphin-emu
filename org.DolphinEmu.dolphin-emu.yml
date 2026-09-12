@@ -18,6 +18,7 @@ finish-args:
   # required for the emulated bluetooth adapter feature to work.
   - --allow=bluetooth
   - --filesystem=xdg-run/app/com.discordapp.Discord:create
+  - --filesystem=xdg-run/app/com.discordapp.DiscordCanary:create
   # required for screensaver inhibition on desktops with
   # old or defective portal implementations.
   - --talk-name=org.freedesktop.ScreenSaver
@@ -75,6 +76,10 @@ modules:
         commands:
           - |
             for i in {0..9}; do
+              test -S $XDG_RUNTIME_DIR/discord-ipc-$i ||
+                ln -sf {app/com.discordapp.Discord,$XDG_RUNTIME_DIR}/discord-ipc-$i;
+              test -S $XDG_RUNTIME_DIR/discord-ipc-$i ||
+                ln -sf {app/com.discordapp.DiscordCanary,$XDG_RUNTIME_DIR}/discord-ipc-$i;
               test -S $XDG_RUNTIME_DIR/discord-ipc-$i ||
                 ln -sf {app/com.discordapp.Discord,$XDG_RUNTIME_DIR}/discord-ipc-$i;
             done
